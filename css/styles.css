@@ -1,13 +1,23 @@
 :root {
-    --color-of-fon:#FFFFFF;
+    --color-of-fon: #FFFFFF;
     --text-color:#2e2f42;
     --paragraf-color:#434455;
+    --link-hover-color:#404BBF;
 }
 body{
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    color: #434455;
+    color: var(--paragraf-color);
     background-color: var(--color-of-fon);
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
 }
 
 .link{
@@ -23,6 +33,30 @@ body{
     cursor: pointer;
 }
 
+.conteiner{
+    width: 1188px;
+    margin: 0 141px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.header {
+    width: 1188px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 .logo{
     font-family: "Raleway", sans-serif;
     font-style: normal;
@@ -38,6 +72,11 @@ body{
     color: var(--text-color);
 }
 
+.nav-list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 .header-nav{
     font-weight: 500;
     font-size: 16px;
@@ -48,7 +87,7 @@ body{
 
 .header-nav:hover,
 .header-nav:focus{
-    color: #404BBF;
+    color: var(--link-hover-color);
 }
 .header-contacts{
     font-style: normal;
@@ -58,16 +97,22 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455; 
+    color: var(--paragraf-color); 
 }
 
 .header-contacts .link:hover,
 .header-contacts .link:focus{
-    color: #404BBF;
+    color: var(--link-hover-color);
+}
+
+.contacts-items{
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .main-section{
-    background-color: #2E2F42;;
+    background-color: #2E2F42;
 }
 .main-title{
     font-weight: 700;
@@ -76,6 +121,9 @@ body{
     text-align: center;
     color: #FFFFFF;
     letter-spacing: 0.02em;
+    width: 496px;
+    margin: auto;
+    padding-top: 188px;
 }
 
 .order-btn{
@@ -85,11 +133,25 @@ body{
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    margin: 48px auto 188px;
+    width: 169px;
+    height: 56px;
+    border-radius: 4px;
+
 }
 
 .order-btn:hover,
 .order-btn:focus{
-    background: #404BBF;
+    background: var(--link-hover-color);
+}
+
+.advantages-section{
+    padding-top: 120px;
+}
+
+.advantages-list{
+    display: flex;
+    gap: 24px;
 }
 
 .title-advantage-list{
@@ -98,6 +160,7 @@ body{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color:var(--text-color);
+    width: 264px;
 }
 
 .text-advantage-list{
@@ -105,9 +168,13 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    width: 264px;
     
 }
-
+.doing-section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .title-section{
     font-weight: 700;
     font-size: 36px;
@@ -116,16 +183,36 @@ body{
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color:var(--text-color);
+    margin: auto;
+    margin-bottom: 72px;
 }
-
+.doing-section .title-section{
+    width: 324px;
+}
+.doing-section .list{
+    display: flex;
+    gap: 24px;
+}
 .team-section{
-    background-color: #F4F4FD;;
+    background-color: #F4F4FD;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.team-section .title-section{
+    width: 164px;
+}
+.team-section .list{
+    display: flex;
+    gap: 24px;
 }
 
 .team-card{
-    background-color: #FFFFFF;
+    background-color: var(--color-of-fon);
 }
 
+.card-info{
+    padding: 32px 16px;
+}
 .team-name{
     font-weight: 500;
     font-size: 20px;
@@ -133,6 +220,7 @@ body{
     text-align: center;
     color:var(--text-color);
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 
 .team-position{
@@ -171,7 +259,7 @@ body{
 
 .portfolio-btn:hover,
 .portfolio-btn:focus{
-    background: #404BBF;
+    background: var(--link-hover-color);
     color: #FFFFFF
 }
 
