@@ -1,5 +1,7 @@
 :root {
-    --color-of-fon: #FFFFFF;
+    --light-main-color: #FFFFFF;
+    --light-accent-color: #F4F4FD;
+    --border-color:#E7E9FC;
     --text-color:#2e2f42;
     --paragraf-color:#434455;
     --link-hover-color:#404BBF;
@@ -8,7 +10,7 @@ body{
     font-family: "Roboto", sans-serif;
     font-style: normal;
     color: var(--paragraf-color);
-    background-color: var(--color-of-fon);
+    background-color: var(--light-main-color);
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -32,25 +34,31 @@ ul, ol{
     font-family: inherit;
     cursor: pointer;
 }
+.page-conteiner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    flex-grow: 1;
+}
 
 .conteiner{
-    width: 1188px;
+    width: 1128px;
     margin: 0 141px;
     padding-left: 15px;
     padding-right: 15px;
     
 }
 
-.header {
-    width: 1188px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
 .header-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1128px;
+    padding: 24px 15px;
+    border-bottom: 1px solid var(--border-color);
 }
 .navigation {
     display: flex;
@@ -114,12 +122,13 @@ ul, ol{
 .main-section{
     background-color: #2E2F42;
 }
+
 .main-title{
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--light-main-color);
     letter-spacing: 0.02em;
     width: 496px;
     margin: auto;
@@ -132,12 +141,15 @@ ul, ol{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
-    margin: 48px auto 188px;
-    width: 169px;
-    height: 56px;
+    text-align: center;
+    justify-content: center;
+    color: var(--light-main-color);
     border-radius: 4px;
-
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 10px;
+    margin-top: 48px;
+    margin-bottom: 188px;
 }
 
 .order-btn:hover,
@@ -194,7 +206,7 @@ ul, ol{
     gap: 24px;
 }
 .team-section{
-    background-color: #F4F4FD;
+    background-color: var(--light-accent-color);
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -207,11 +219,17 @@ ul, ol{
 }
 
 .team-card{
-    background-color: var(--color-of-fon);
+    background-color: var(--light-main-color);
 }
 
 .card-info{
-    padding: 32px 16px;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    margin: 32px 16px;
 }
 .team-name{
     font-weight: 500;
@@ -220,7 +238,6 @@ ul, ol{
     text-align: center;
     color:var(--text-color);
     letter-spacing: 0.02em;
-    padding-bottom: 8px;
 }
 
 .team-position{
@@ -235,34 +252,74 @@ ul, ol{
     background: #2E2F42;
 }
 
+.footer-box{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .footer-paragraph{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #F4F4FD;
+    color: var(--light-accent-color);
+    width: 264px;
+    padding-top: 16px;
 }
 
 .logo-part-footer{
-   color: #F4F4FD;
+   color: var(--light-accent-color);
+}
+
+.portfolio-section{
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+.portfolio-btn-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 72px;
 }
 
 .portfolio-btn{
-    background: #F4F4FD;
+    background: var(--light-accent-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;
     color: #4D5AE5;
+    padding: 12px 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus{
     background: var(--link-hover-color);
-    color: #FFFFFF
+    color: var(--light-main-color)
 }
 
+.work-cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.work-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
+    gap: 8px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
 .img-title{
     font-weight: 500;
     font-size: 20px;
